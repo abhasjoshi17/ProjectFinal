@@ -1,0 +1,36 @@
+<div ng-controller="teachertblCtrl">
+            <!--Teacher Id<input type="text" ng-model="formModels.teacherId" class="form-control"><br>-->
+            First Name<input ng-model="formModels.firstName" type="text"><br>
+            Last Name<input type="text" ng-model="formModels.lastName"><br>
+            Address<input type="text" ng-model="formModels.address"><br>
+            Phone Number<input type="number" ng-model="formModels.phoneNumber"><br>
+            Email<input type="text" ng-model="formModels.email">
+        <button type="button" class="btn btn-primary" ng-click=add()>Submit</button>
+    
+<table class="table table-inverse">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th></th></tr>
+ 
+        <tbody  ng-repeat ="b in teacherList">
+    <td>{{b.firstName}}</td>
+    <td>
+        {{b.lastName}}</td>
+    <td>
+        {{b.address}}</td>
+             <td>
+        {{b.phoneNumber}}</td>
+               <td>
+        {{b.email}}</td>
+               <td>
+                <button class="btn btn-primary" ng-click="update(b.teacherId)"> Update </button>
+                <button class= "btn btn-danger" ng-click="delete(b.teacherId)"> Delete </button></td>
+            
+            </tbody>
+        </table>
+    </div>
+    

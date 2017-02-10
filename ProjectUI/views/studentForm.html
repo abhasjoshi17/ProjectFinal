@@ -1,0 +1,50 @@
+<form class="form-group">
+            <div class="row">
+    <div class="col-md-2" div id="student-form"  ng-controller="studenttblCtrl" updateid="updateId">
+        <!--
+            Student Id<input type="text" class="form-control"><br>-->
+       
+            First Name<input ng-model="formModels.firstName" type="text"><br>
+            Last Name<input type="text" ng-model="formModels.lastName"><br>
+            Address<input type="text" ng-model="formModels.address"><br>
+            Phone Number<input type="number" ng-model="formModels.phoneNumber"><br>
+            Email<input type="text" ng-model="formModels.email"><br><br>
+            SSN<input type="number" ng-model="formModels.ssn"><br>
+            <button type="button" class="btn btn-primary" ng-click=add()>Submit</button>
+        
+ <table class="table table-inverse">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>SSN</th>
+        <th></th></tr>
+        
+ 
+        <tbody  ng-repeat ="a in studentlist">
+    <td>{{a.firstName}}</td>
+    <td>
+        {{a.lastName}}</td>
+    <td>
+        {{a.address}}</td>
+             <td>
+        {{a.phoneNumber}}</td>
+               <td>
+        {{a.email}}</td>
+               <td>
+        {{a.ssn}}</td>
+            <td> 
+                <button class="btn btn-primary" ng-click="update(a.studentId)">Update</button>
+                <button class= "btn btn-danger" ng-click="delete(a.studentId)">Delete</button></td>
+            
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+</form>
+
+        
+     
